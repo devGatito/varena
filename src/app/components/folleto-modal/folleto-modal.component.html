@@ -1,0 +1,35 @@
+<dialog id="folleto" class="hidden">
+  <p>Descarga nuestro folleto</p>
+  <span>Llena el formulario para descargar nuestro folleto</span>
+  <div class="form">
+    <input
+      [(ngModel)]="templateForm.SingleLine"
+      name="name"
+      placeholder="Nombre"
+      class="p:1 mv:1 style:round t:block"
+    />
+    <input
+      [(ngModel)]="templateForm.SingleLine1"
+      name="firstName"
+      placeholder="Apellido"
+      class="p:1 mv:1 style:round t:block"
+    />
+    <input
+      [(ngModel)]="templateForm.PhoneNumber1_countrycode"
+      name="phone"
+      placeholder="Celular"
+      class="p:1 mv:1 style:round t:block"
+    />
+    <button type="button" (click)="submit()" class="mt:1">
+      Descargar folleto
+    </button>
+  </div>
+  <button class="close">Volver a Varenna Residencial</button>
+  <span class="footer">
+    Acepto que toda la información recabada con este formulario será tratada de
+    conformidad con el
+    <a href="https://ruba.mx/aviso-de-privacidad" target="_blank"
+      >aviso de privacidad</a
+    >.
+  </span>
+</dialog>

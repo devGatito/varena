@@ -1,0 +1,101 @@
+<!-- <div id="closeform" (click)="close()" [ngClass]="{ hide: !showForm }"></div> -->
+<div class="fix_form position_header flex:inline items:end justify:end gap:4">
+  <section
+    class="header__form animate__animated"
+    id="headerForm"
+    [ngClass]="{ collapsed: !showForm }"
+  >
+    <div class="flex items:center content:center ph:1">
+      <div class="form__title gap:2 open-form t:center" style="width: 100%">
+        <img data-src="assets/icon.png" width="20" height="20" alt="" />
+        <h2
+          class="size:medium"
+          style="font-family: var(--font-family-title); word-wrap: break-word"
+        >
+          {{ message }}
+        </h2>
+      </div>
+
+      <form class="flex:column gap:3">
+        <div class="flex justify:end">
+          <button class="closeForm" type="button" (click)="close()">
+            <img
+              data-src="assets/icons/close-menu.svg"
+              width="22"
+              height="22"
+            />
+          </button>
+        </div>
+        <div class="flex:column items:center">
+          <h2
+            style="color: #E46355"
+            class="t:block t:light size:large marginless"
+          >
+            Agendar cita
+          </h2>
+        </div>
+
+        <div class="flex flex:nowrap gap:4">
+          <input
+            [(ngModel)]="templateForm.SingleLine"
+            name="SingleLine"
+            placeholder="Nombre"
+            class="ui:input p:1 style:small-round t:block"
+            autofocus
+          />
+          <input
+            [(ngModel)]="templateForm.SingleLine1"
+            name="SingleLine1"
+            placeholder="Apellido"
+            class="ui:input p:1 style:small-round t:block"
+          />
+        </div>
+        <input
+          [(ngModel)]="templateForm.PhoneNumber1_countrycode"
+          name="PhoneNumber1_countrycode"
+          placeholder="Celular"
+          class="ui:input p:1 style:small-round t:block"
+        />
+        <input
+          [(ngModel)]="templateForm.Email"
+          name="Email"
+          placeholder="Correo electrónico"
+          class="ui:input p:1 style:small-round t:block"
+        />
+
+        <textarea
+          [(ngModel)]="templateForm.MultiLine"
+          name="MultiLine"
+          placeholder="Comentarios"
+          class="ui:input p:1 style:small-round t:block"
+        ></textarea>
+
+        <div class="terms-check">
+          <input type="checkbox" id="checkbox" checked />
+          <label for="checkbox" class="opacity:4"
+            >Acepto que toda la información recabada con este formulario será
+            tratada de conformidad con el aviso de privacidad.</label
+          >
+        </div>
+
+        <div class="flex flex:nowrap items:center justify:center gap:2 mb:1">
+          <button
+            type="button"
+            (click)="submit()"
+            class="ui:button type:button theme:form style:small-round ph:1"
+          >
+            Enviar
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <a
+    class="whatsapp_form whatappForm"
+    [ngClass]="{ hide: showForm }"
+    (click)="openWhatsApp()"
+  >
+    <img data-src="assets/icons/wp.svg" alt="WhatsApp" />
+  </a>
+</div>

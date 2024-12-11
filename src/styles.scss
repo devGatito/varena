@@ -1,0 +1,427 @@
+@font-face {
+  font-family: "Abrade";
+  src: url("/varenna-residencial/assets/fonts/abrade-black.ttf")
+    format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Abrade";
+  src: url("/varenna-residencial/assets/fonts/abrade-bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Abrade";
+  src: url("/varenna-residencial/assets/fonts/abrade-medium.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Abrade";
+  src: url("/varenna-residencial/assets/fonts/abrade-regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Abrade";
+  src: url("/varenna-residencial/assets/fonts/abrade-thin.ttf")
+    format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Fuente HelveticaLTStd */
+@font-face {
+  font-family: "HelveticaLTStd";
+  src: url("/varenna-residencial/assets/fonts/helveticaLTStd-roman.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Fuente MunaleLoird */
+@font-face {
+  font-family: "MunaleLoird";
+  src: url("/varenna-residencial/assets/fonts/munaleLoird-regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  scroll-behavior: smooth;
+  --db-base-color: #fff;
+  --db-font-face: "Abrade", sans-serif;
+  --db-title-face: "Abrade", sans-serif;
+  --db-line-height: 1.4;
+  --db-small-relative: 90%;
+  --db-height-elements: 45px;
+
+  --primaryColor: #0e4345;
+  --softBeige: #f3efe4;
+  --darkColor: #000000;
+  --lightColor: #fff;
+  --colorSpan: #dac367;
+  --colorButton: #e46355;
+  --widthFull: 1280px;
+  --movileBreakpoint: 899px;
+
+  /*
+  * Definen el porcentaje o medida en pixeles a restar del 100%
+  * de la pantalla para establecer el limite de container: .flex:container
+  */
+  --db-wrap-m: 5%;
+  --db-wrap-tb: 10%;
+  --db-wrap-l: 15%;
+  --db-wrap-d: 20%;
+  --db-wrap-hd: 20%;
+  --db-wrap-w: 30%;
+
+  //Tamaños de texto para diferentes resoluciones
+  --db-font-base: 16px;
+  --db-size-xs: 12px;
+  --db-size-sm: 14px;
+  --db-size-md: 20px;
+  --db-size-lg: 25px;
+  --db-size-tl: 40px;
+  --db-size-jb: 60px;
+  --db-size-hr: 80px;
+  --db-size-mg: 150px;
+
+  //radius
+  --db-radius-sm: 4px;
+  --db-radius-md: 12px;
+  --db-radius-lg: 18px;
+  --db-radius-fluid: 100%;
+
+  // ajustes de media queries
+  --db-breakpoint-m: 320px;
+  --db-breakpoint-tb: 765px;
+  --db-breakpoint-l: 1020px;
+  --db-breakpoint-d: 1360px;
+  --db-breakpoint-hd: 1430px;
+  --db-breakpoint-w: 1910px;
+}
+
+//Tema de los componentes CSS
+$primary: #0e4345;
+$secondary: #f3efe4;
+$white: #ffffff;
+$black: #000000;
+$smoke: #f6f6f6;
+$dark: #404040;
+$gray: #717d7d;
+
+//Colores de estado para elmentos input, etc.
+$state-danger: #c51533;
+$state-warning: #000000;
+$state-info: #157bc5;
+$state-success: #00c850;
+
+@import "dbgrid/scss/lib";
+@include create-color-palette($colors, $tones);
+
+body {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 1920px;
+  width: 100%;
+}
+
+ul {
+  list-style: circle;
+}
+
+.title {
+  color: var(--lightColor);
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  font-family: var(--font-family-title);
+  font-weight: 700;
+
+  @media screen and (min-width: 768px) {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+.title-span {
+  font-family: var(--font-family-span);
+  color: var(--lightColor);
+  font-weight: 400;
+  font-style: italic;
+}
+
+// ====================================
+// ===== Globals =====
+// ====================================
+
+.button-primary {
+  background-color: var(--primaryColor);
+  min-height: 56px;
+  color: var(--lightColor);
+  line-height: 30px;
+  border: none;
+
+  cursor: pointer;
+
+  font-family: var(--font-family-main);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 30px;
+  padding: 0px 50px;
+
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+
+  @media screen and (min-width: 768px) {
+    min-width: 487px;
+    font-size: 18px;
+  }
+}
+
+.button-three {
+  background-color: var(--colorButton);
+  min-height: 56px;
+  color: var(--lightColor);
+  line-height: 30px;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family-abrade);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 30px;
+  padding: 0px 50px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+
+  @media screen and (min-width: 768px) {
+    width: auto;
+    font-size: 18px;
+    margin-block: 20px;
+  }
+}
+
+.button-four {
+  background-color: var(--colorButton);
+  min-height: 56px;
+  color: var(--lightColor);
+  line-height: 30px;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family-abrade);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 30px;
+  padding: 0px 50px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+
+  @media screen and (min-width: 768px) {
+    width: auto;
+    font-size: 18px;
+    margin-block: 20px;
+  }
+}
+.button-secondary {
+  background-color: var(--primaryColor);
+
+  min-height: 42px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+
+  font-size: 16px;
+  line-height: 30px;
+  padding: 0px 50px;
+
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+
+  color: var(--lightColor);
+  width: auto;
+  max-width: 487px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+#uiGallery {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0);
+  transition: all 200ms linear;
+}
+
+#uiGallery.show {
+  pointer-events: all;
+  transform: scale(1);
+  opacity: 1;
+}
+
+#uiGallery .content {
+  width: 100vw;
+  height: 100vh;
+}
+
+#uiGallery img:not(.icon) {
+  object-fit: contain;
+  width: 95%;
+  height: 95%;
+  border-radius: 20px;
+  user-select: none;
+}
+
+#uiGallery picture {
+  width: 100%;
+  height: calc(100% - 60px);
+}
+
+#uiGallery p {
+  margin: 0;
+  color: white;
+}
+
+#uiGallery .buttonClose {
+  cursor: pointer;
+}
+
+#uiGallery .galleryGrid {
+  display: grid;
+  width: 100%;
+
+  grid-template-columns: 50px 1fr 50px;
+  grid-template-rows: 90vh;
+  align-items: center;
+}
+
+#uiGallery .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  min-height: 60px;
+  cursor: pointer;
+  z-index: 5;
+  user-select: none;
+}
+
+#uiGallery .btn * {
+  pointer-events: none;
+}
+
+#uiGallery [fix] {
+  height: 100%;
+}
+
+#uiGallery .gallery-slider {
+  transition: all 400ms ease-out;
+}
+
+#uiGallery .gallery-slider img {
+  transition: all 400ms ease;
+  cursor: zoom-in;
+}
+
+#uiGallery picture {
+  opacity: 0.2;
+  transform: scale(0.7);
+  transition: all 200ms ease-out;
+  user-select: none;
+  overflow: hidden;
+}
+
+#uiGallery picture.active {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 200ms ease-in;
+}
+@media screen and (min-width: 992px) {
+  #uiGallery .galleryGrid {
+    padding: 0 60px;
+  }
+}
+
+img {
+  opacity: 0;
+  transition: opacity 200ms ease-out;
+
+  &.loaded {
+    opacity: 1;
+  }
+}
+
+.color {
+  &\:white {
+    color: white;
+  }
+}
+
+@import "dbgrid/scss/lib";
+
+body.thanks {
+  app-folleto-modal,
+  app-form,
+  app-modal-gallery,
+  app-whatsapp-form,
+  app-popup {
+    &,
+    & * {
+      transform: scale(0) !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      display: none !important;
+      visibility: hidden !important;
+    }
+  }
+}

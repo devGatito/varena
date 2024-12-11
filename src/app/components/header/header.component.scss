@@ -1,0 +1,97 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    top: 0;
+    width: 100%;
+    background-image: url("/varenna-residencial/assets/images/Banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: 0.2;
+    }
+    > * {
+      position: relative;
+      overflow-x: hidden;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    max-width: 80%;
+    margin: 0 auto;
+    @media screen and (min-width: 768px) {
+      height: 1000px;
+    }
+  }
+
+  &__title {
+    color: var(--lightColor);
+    font-size: 26px;
+    text-align: center;
+    font-family: var(--font-family-munale);
+    font-weight: 700;
+    color: white;
+
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 50px;
+      line-height: 60px;
+    }
+  }
+  &__title span {
+    font-family: var(--font-family-span);
+    color: var(--lightColor);
+    font-weight: 400;
+    font-style: italic;
+  }
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__logo {
+    display: flex;
+    max-width: 360px;
+    min-height: 140px;
+    width: 90%;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 40px;
+  }
+  &__social {
+    background-color: rgb(38 38 38 / 15%);
+    padding: 10px;
+    display: inline-flex;
+    gap: 20px;
+    border-radius: 16px;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+  }
+
+  &__ruba img {
+    width: 100%;
+  }
+  &button-primary {
+    background-color: aquamarine;
+  }
+}

@@ -1,0 +1,34 @@
+@import "dbgrid/scss/lib";
+
+.flex {
+  &\:column {
+    flex-direction: column;
+  }
+  &\:reverse-column {
+    flex-direction: column-reverse;
+  }
+
+  &.gap {
+    &\:1{
+      gap: 1rem;
+    }
+  }
+}
+
+.theme {
+  &\:accent {
+    box-shadow: none !important;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    gap: 1rem;
+
+    &:hover {
+      background-color: black;
+    }
+  }
+}
+
+.main{
+  position: relative;
+}
+

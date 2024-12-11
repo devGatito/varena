@@ -1,0 +1,78 @@
+.brochure {
+  background-color: var(--primaryColor);
+
+  &__content {
+    padding: 120px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 819px;
+    margin: auto;
+    gap: 40px;
+  }
+
+  &__title {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    color: var(--lightColor);
+
+    @media screen and (min-width: 768px) {
+      font-size: 32px;
+    }
+  }
+
+  &__title span {
+    color: var(--colorSpan);
+  }
+
+  &__paragraph {
+    color: var(--lightColor);
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  &__images-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  &__image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  } &__image-style {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    padding: 20px;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 100px;
+  }
+
+  &__image-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--lightColor);
+  }
+  &__image-text span {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--colorSpan);
+  }
+
+}

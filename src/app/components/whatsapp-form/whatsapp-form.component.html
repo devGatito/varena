@@ -1,0 +1,36 @@
+<dialog id="whatapp" class="hidden">
+  <p>Contáctanos por WhatsApp</p>
+  <span>Llena el formulario para brindarte una mejor atención</span>
+  <div class="form">
+    <input
+      [(ngModel)]="templateForm.SingleLine"
+      name="SingleLine"
+      placeholder="Nombre"
+      class="p:1 mv:1 style:round t:block"
+    />
+    <input
+      [(ngModel)]="templateForm.SingleLine1"
+      name="SingleLine1"
+      placeholder="Apellido"
+      class="p:1 mv:1 style:round t:block"
+    />
+    <input
+      [(ngModel)]="templateForm.PhoneNumber1_countrycode"
+      name="PhoneNumber1_countrycode"
+      placeholder="Whatsapp"
+      class="p:1 mv:1 style:round t:block"
+    />
+    <button type="button" (click)="submit()" class="mt:1">
+      Enviar whatsapp
+    </button>
+    <button class="close">Volver a Varenna Residencial</button>
+  </div>
+  <!-- <button class="close">Volver a Santorini</button> -->
+  <span class="footer">
+    Acepto que toda la información recabada con este formulario será tratada de
+    conformidad con el
+    <a href="https://ruba.mx/aviso-de-privacidad" target="_blank"
+      >aviso de privacidad</a
+    >.
+  </span>
+</dialog>

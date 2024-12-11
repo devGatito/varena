@@ -1,0 +1,356 @@
+@import "dbgrid/scss/lib";
+
+$inputTextColor: var(--db-black);
+$headerBackground: var(--db-primary);
+
+#closeform {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 98;
+  cursor: pointer;
+
+  &.hide {
+    display: none;
+  }
+}
+
+.fix_form {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 200;
+  padding: 1rem;
+
+  &.menu-opened {
+    transform: scale(0) !important;
+    pointer-events: none !important;
+  }
+
+  @include since(l) {
+    padding-right: 2rem;
+  }
+
+  @include since(d) {
+    padding-right: 80px;
+    padding-bottom: 30px;
+  }
+
+  @include since(hd) {
+    padding-right: 100px;
+  }
+
+  @include since(w) {
+    padding-bottom: 60px;
+  }
+
+  &.position_header {
+    .header__form:not(.collapsed) {
+      @include since(l) {
+        margin-bottom: calc(100% - 80%);
+      }
+      @include since(d) {
+        margin-bottom: 0;
+      }
+      @include since(hd) {
+        margin-bottom: 0;
+      }
+      @include since(w) {
+        margin-bottom: calc(100% - 80%);
+      }
+    }
+  }
+
+  &.position_footer {
+    @include since(l) {
+      padding-bottom: 60px;
+    }
+
+    .header__form:not(.collapsed) {
+      @include since(l) {
+        margin-bottom: calc(100% - 80%);
+      }
+      @include since(d) {
+        margin-bottom: calc(100% - 90%);
+      }
+      @include since(hd) {
+        margin-bottom: calc(100% - 80%);
+      }
+      @include since(w) {
+        margin-bottom: calc(100% - 70%);
+      }
+    }
+  }
+}
+
+.header__form {
+  // right: 0;
+  // bottom: 0;
+  // position: fixed;
+  height: 500px;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  color: black;
+  background-color: var(--db-white);
+  transition: all 1s;
+  overflow: hidden;
+  // transform: scale(0.9);
+  z-index: 102;
+
+  box-shadow: 0 4px 16px -2px rgb(from black r g b / 16%);
+  border: 2px solid white;
+
+  @include since(hd) {
+    // transform: scale(1);
+  }
+
+  form {
+    height: auto;
+    position: relative;
+
+    .ui\:button {
+      background-color: #e46355 !important;
+      color: white !important;
+      width: 100%;
+    }
+  }
+
+  @include since(tb) {
+    max-width: 400px;
+  }
+
+  @include since(d) {
+    z-index: 102;
+  }
+
+  #closeForm {
+    display: none;
+  }
+
+  .form__title {
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    display: none;
+    img {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      min-height: 40px;
+      object-fit: contain;
+    }
+  }
+
+  &.collapsed {
+    z-index: 98;
+    .form__title {
+      display: inline-flex;
+    }
+
+    form {
+      overflow: hidden;
+      height: 0;
+    }
+    height: rem(60px);
+    max-height: rem(60px);
+    width: rem(240px);
+    top: initial;
+    background-color: #e46355;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 4px 30px rgb(from rgb(243, 0, 0) r g b / 16%);
+
+    @include since(d) {
+      height: rem(60px);
+      max-height: rem(60px);
+    }
+
+    div#closeForm {
+      display: none;
+    }
+
+    .form__title--img {
+      min-height: 40px;
+      min-width: 40px;
+    }
+
+    .title-form {
+      text-align: center;
+      span {
+        height: 0;
+        display: block;
+        overflow: hidden;
+        font-size: 0.9rem;
+      }
+    }
+
+    @include until(tb) {
+      height: 60px;
+      padding: 10px;
+      left: 0.5rem;
+      top: initial;
+      bottom: 0.5rem;
+    }
+  }
+
+  .closeForm {
+    background-color: rgba(0, 0, 0, 0.05);
+    border: none;
+    cursor: pointer;
+    min-width: 30px;
+    min-height: 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: -18px;
+  }
+}
+
+.whatsapp_form {
+  $wp_size: rem(60px);
+
+  width: $wp_size;
+  height: $wp_size;
+  min-width: $wp_size;
+  min-height: $wp_size;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--db-success);
+  border-radius: 50%;
+  transition: all 200ms linear;
+  cursor: pointer;
+
+  img {
+    width: calc($wp_size - 30%);
+    min-width: calc($wp_size - 30%);
+    height: calc($wp_size - 30%);
+    min-height: calc($wp_size - 30%);
+    object-fit: contain;
+  }
+
+  @include until(tb) {
+    &.hide {
+      display: none;
+    }
+  }
+
+  @include until(l) {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+select,
+.ui\:input,
+textarea {
+  display: block;
+  width: 100%;
+  margin: 0;
+  font-family: sans-serif !important;
+  border-radius: var(--db-radius-md);
+  background-color: var(--db-smoke);
+  border: 1px solid var(--db-smoke);
+  padding: 1rem;
+  color: var(--db-black);
+
+  &::placeholder {
+    color: rgb(from black r g b / 40%);
+  }
+
+  &:hover,
+  &:focus {
+    border-color: var(--db-smoke);
+    background-color: var(--db-smoke);
+  }
+}
+
+select {
+  appearance: auto;
+  padding: 0 1rem !important;
+  &::-ms-input-placeholder,
+  &::-webkit-input-placeholder,
+  &::-moz-input-placeholder,
+  &::placeholder,
+  &:disabled,
+  & {
+    color: #6c6c6c !important;
+  }
+
+  option {
+    &,
+    &:disabled {
+      color: #6c6c6c !important;
+    }
+  }
+}
+
+textarea {
+  min-height: 80px;
+}
+
+.terms-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  label {
+    width: 100%;
+    font-size: 0.6rem;
+  }
+
+  input[type="radio"] {
+    border-radius: 5rem;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    padding: 0;
+    & + label {
+      font-size: 0.9rem;
+      opacity: 0.4;
+    }
+  }
+
+  input {
+    min-width: 26px;
+    min-height: 26px;
+    width: 26px;
+    height: 26px;
+    background-color: var(--db-white);
+    border-radius: 6px;
+    vertical-align: middle;
+    border: 1px solid var(--db-black);
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+
+    &:not(:checked) {
+      background-color: var(--db-white);
+    }
+
+    &:checked {
+      border: none;
+      background-color: transparent;
+      background-image: url("/varenna-residencial/assets/icons/check.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}

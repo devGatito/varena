@@ -1,0 +1,217 @@
+.department {
+  &__content {
+    background-color: var(--lightColor);
+    margin: auto;
+  }
+
+  &__top {
+    padding: 120px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1021px;
+    width: 100%;
+    margin: auto;
+    gap: 40px;
+
+    @media screen and (min-width: 992px) {
+      padding: 120px 0;
+    }
+  }
+  &__title {
+    font-family: var(--font-family-title);
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    font-weight: 700;
+    color: var(--primaryColor);
+
+    @media screen and (min-width: 768px) {
+      font-size: 50px;
+      line-height: 60px;
+    }
+  }
+  &__title span {
+    font-family: var(--font-family-span);
+    font-weight: 400;
+    color: var(--primaryColor);
+    font-style: italic;
+  }
+  &__paragraph1 {
+    color: var(--primaryColor);
+    line-height: 28px;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  &__paragraph1 span {
+    line-height: 28px;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  &__alepo {
+    background-color: var(--softBeige);
+  }
+  &__alepo-content {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+    @media (min-width: 1200px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    @media screen and (min-width: 1200px) {
+      width: 50%;
+    }
+  }
+  &__paragraph2 {
+    color: var(--primaryColor);
+    font-weight: 700;
+    line-height: 28px;
+    font-size: 18px;
+    text-align: left;
+    margin: 20px 0 50px;
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      font-size: 22px;
+    }
+  }
+  &__details {
+    max-width: 660px;
+    width: 100%;
+    text-align: center;
+    padding: 60px 28px;
+  }
+  &__aldaba {
+    width: 90%;
+
+    @media screen and (min-width: 768px) {
+      width: initial;
+    }
+  }
+  // &__details img {
+  // }
+  &__title-link {
+    color: var(--primaryColor);
+    font-size: 18px;
+    font-weight: 700;
+    margin: 30px 0;
+
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+    }
+  }
+  &__title-link span {
+    font-weight: 400;
+  }
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  &__links a {
+    background-color: rgb(from #003748 r g b / 10%);
+    padding: 7px 28px;
+    display: flex;
+    gap: 10px;
+    border-radius: 16px;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--primaryColor);
+    max-width: 254px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  &__image {
+    width: 100%;
+    position: relative;
+    display: flex;
+    @media screen and (min-width: 1200px) {
+      width: 50%;
+      max-width: 1089px;
+      min-height: 600px;
+    }
+  }
+
+  &__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 60px 0;
+    justify-content: space-between;
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    li {
+      font-family: "Lato", sans-serif;
+      color: var(--primaryColor);
+      font-weight: 400;
+      line-height: 28px;
+      font-size: 22px;
+    }
+  }
+  &__icon-content {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+  &__icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__icon img {
+   width: 60px;
+   height: 60px;
+  }
+  &__icon span {
+    color: var(--primaryColor);
+    font-weight: 600;
+    font-style: italic;
+  }
+  &__icons {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  &__leyenda {
+    position: absolute;
+    width: 100%;
+    top: 10px;
+  }
+  &__leyenda p {
+    text-align: center;
+    font-size: 16px;
+    color: var(--lightColor);
+  }
+}

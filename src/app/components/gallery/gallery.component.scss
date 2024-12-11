@@ -1,0 +1,180 @@
+.gallery {
+  background-color: var(--softBeige);
+  cursor: pointer;
+  &__grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__grid-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__grid-item--large {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  &__img-container {
+    overflow: hidden;
+    display: flex;
+  }
+
+  &__picture {
+    width: 100%;
+    height: 240px;
+
+    @media screen and (min-width: 768px) {
+      height: 500px;
+    }
+
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease;
+    -webkit-transition: transform 1s ease;
+    -moz-transition: transform 1s ease;
+    -ms-transition: transform 1s ease;
+    -o-transition: transform 1s ease;
+  }
+
+  &__img:hover {
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+  }
+
+  @media (min-width: 1200px) {
+    &__grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 10px;
+    }
+  }
+}
+
+
+.legalgal {
+  background-color: var(--softBeige);
+}
+
+// @import "dbgrid/scss/core/config", "dbgrid/scss/core/base",
+//   "dbgrid/scss/core/fonts", "dbgrid/scss/core/grid", "dbgrid/scss/core/helpers",
+//   "dbgrid/scss/core/buttons", "dbgrid/scss/core/inputs",
+//   "dbgrid/scss/core/image", "dbgrid/scss/core/hide";
+
+// .flex {
+//   &\:column {
+//     flex-direction: column;
+//   }
+//   &\:reverse-column {
+//     flex-direction: column-reverse;
+//   }
+
+//   &.gap {
+//     &\:1{
+//       gap: 1rem;
+//     }
+//     &\:2{
+//       gap: 2rem;
+//     }
+//   }
+// }
+
+// #uiGallery {
+//   display: grid;
+//   width: 100vw;
+//   height: 100vh;
+//   overflow: hidden;
+//   position: fixed;
+//   z-index: 99999;
+//   background-color: rgba(0, 0, 0, 0.5);
+//   backdrop-filter: blur(8px);
+
+//   grid-template-columns: 1fr;
+//   grid-template-rows: auto 1fr;
+
+//   top: 0;
+//   left: 0;
+
+//   opacity: 0;
+//   pointer-events: none;
+//   transform: scale(0);
+//   transition: all 200ms linear;
+// }
+
+// #uiGallery.show {
+//   pointer-events: all;
+//   transform: scale(1);
+//   opacity: 1;
+// }
+
+// #uiGallery .content {
+//   width: 100vw;
+//   height: 100vh;
+// }
+
+// #uiGallery p {
+//   margin: 0;
+//   color: white
+// }
+
+// #uiGallery .buttonClose {
+//   cursor: pointer;
+// }
+
+// #uiGallery .galleryGrid {
+//   display: grid;
+//   width: 100%;
+
+//   grid-template-columns: 50px 1fr 50px;
+//   grid-template-rows: 90vh;
+//   align-items: center;
+// }
+
+// #uiGallery .btn {
+//   display: inline-flex;
+//   align-items: center;
+//   justify-content: center;
+//   align-content: center;
+
+//   width: 60px;
+//   min-width: 60px;
+//   height: 60px;
+//   min-height: 60px;
+//   cursor: pointer;
+//   z-index: 5;
+//   user-select: none;
+// }
+
+// #uiGallery .btn * {
+//   pointer-events: none;
+// }
+
+// #uiGallery [fix] {
+//   height: 100%;
+// }
+
+// #uiGallery .gallery-slider {
+//   transition: all 400ms ease-out;
+// }
+
+// #uiGallery .gallery-slider img {
+//   transition: all 400ms ease;
+//   cursor: zoom-in;
+// }
+
+// @media screen and (min-width: 992px) {
+//   #uiGallery .galleryGrid {
+//       padding: 0 60px;
+//   }
+// }

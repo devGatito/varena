@@ -1,0 +1,96 @@
+dialog#whatapp{
+  background-color: white;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  z-index: 999999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+
+  opacity: 1;
+  transform: scale(1);
+  transition: all 400ms ease-in-out;
+
+  &.hidden{
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  & > p {
+    color: var(--primaryColor);
+    font-size: 30px;
+    font-family: var(--font-family-span);
+    font-style: italic;
+    margin: 0;
+  }
+
+  & > span{
+    font-size: 16px;
+    margin: 10px 0;
+    text-align: center;
+    color: #222F3A;
+  }
+
+  .footer{
+    font-size: 14px;
+
+    a{
+      color: var(--primaryColor);
+      font-weight: bold;
+      font-size: inherit;
+    }
+  }
+
+  & > .form {
+    width: 100%;
+   & > input{
+      height: 50px;
+      display: block;
+      width: 100%;
+      margin: 15px 0;
+      border-radius: 10px;
+      background-color: white;
+      border: 1px solid #808080;
+      color: #222F3A;
+      &::placeholder{
+        padding-left: 10px;
+        color: #222F3A;
+      }
+    }
+
+    button, a{
+      display: block;
+      text-align: center;
+      width: 100%;
+      background-color: var(--primaryColor);
+      padding: 15px 10px;
+      color: white;
+      border-radius: 15px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    & > button.close{
+        width: 100%;
+        border: 1px solid var(--primaryColor);
+        padding: 15px 10px;
+        color: var(--primaryColor);
+        background-color: white;
+        border-radius: 15px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+  }
+
+}
+
+dialog::backdrop{
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}

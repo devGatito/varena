@@ -1,0 +1,27 @@
+@import "dbgrid/scss/lib";
+
+
+.theme {
+  &\:success {
+    box-shadow: none !important;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    gap: 1rem;
+
+    background-color: green;
+    color: white;
+    &:hover {
+      background-color: green;
+    }
+  }
+}
+
+.main{
+  position: relative;
+}
+
+a {
+  font-size: inherit;
+}
+
+

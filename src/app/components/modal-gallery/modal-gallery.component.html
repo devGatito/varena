@@ -1,0 +1,61 @@
+<div id="uiGallery">
+  <div class="flex ph:2 pt:2 pb:1">
+    <div class="flex:wrapper">
+      <div class="flex items:center justify:between">
+        <h2 class="title">Varenna Residencial</h2>
+        <button class="closeButton ui:button style:rounded" (click)="close()">
+          <img
+            class="icon"
+            data-src="assets/icons/closeB.svg"
+            width="28"
+            height="28"
+            alt="cerrar modal"
+          />
+          <span>Cerrar</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="galleryGrid">
+    <div class="flex justify:center areaButton">
+      <button id="nextBtn" class="iconButton" (click)="forward()">
+        <img
+          data-src="assets/icons/arror.svg"
+          alt="imagen anterior"
+          style="transform: rotate(180deg)"
+        />
+      </button>
+    </div>
+
+    <div class="flex width-20 items:center justify:center" fix>
+      <div class="m:width-20 d:width-18" fix>
+        <div
+          class="gallery-slider flex flex:nowrap items:center justify:start"
+          fix
+        >
+          <!-- render here images gallery -->
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify:center areaButton">
+      <button id="prevBtn" class="iconButton" (click)="back()">
+        <img data-src="assets/icons/arror.svg" alt="imagen anterior" />
+      </button>
+    </div>
+  </div>
+  <div class="flex p:2 mobileAreabutton">
+    <div class="flex justify:center gap:4">
+      <button class="iconButton" (click)="forward()">
+        <img
+          data-src="assets/icons/arror.svg"
+          alt="imagen anterior"
+          style="transform: rotate(180deg)"
+        />
+      </button>
+      <button class="iconButton" (click)="back()">
+        <img data-src="assets/icons/arror.svg" alt="imagen anterior" />
+      </button>
+    </div>
+  </div>
+</div>

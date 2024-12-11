@@ -1,0 +1,259 @@
+<section class="department">
+  <div class="department__content">
+    <div class="department__alepo">
+      <div class="department__alepo-content container">
+        <div class="department__text">
+          <div class="department__details">
+            <div class="department__logo">
+              <img
+                data-src="assets/icons/logo_varenna.png"
+                height="300px"
+                alt="clover"
+                class="img-logo"
+              />
+            </div>
+
+            <p class="department__paragraph1 mb:3">
+              Contamos con 2 <span>modelos</span> de residencias, cada una de
+              ellas refleja un diseño arquitectónico distintivo donde el<span>
+                confort y la estética </span
+              >moderna se encuentran en <span>perfecta armonía.</span>
+            </p>
+
+            <!-- Contenedor para los botones -->
+            <div class="department__button-container">
+              <button
+                class="olivo"
+                [ngClass]="{ 'active': activeButton === 'olivo' }"
+                (click)="toggleButton('olivo')"
+              >
+                OLIVO
+              </button>
+              <button
+                class="linaria"
+                [ngClass]="{ 'active': activeButton === 'linaria' }"
+                (click)="toggleButton('linaria')"
+              >
+                LINARIA
+              </button>
+            </div>
+
+            <ng-container *ngIf="activeButton === 'olivo'">
+              <p class="size:large mv:2 t:bold">Desde $ 3,420,000.00 MXN</p>
+            </ng-container>
+
+            <p
+              [ngClass]="{showLinaria: activeButton === 'linaria'}"
+              class="size:large mv:2 t:bold prox linaria2"
+            >
+              Proximamente
+            </p>
+            <div
+              [ngClass]="{showLinaria: activeButton === 'linaria'}"
+              class="flex:center linaria2"
+            >
+              <a
+                class="flex:inline items:center justify:center button-three open-form"
+                (click)="handleEvent()"
+              >
+                Notificarme cuando este disponible
+              </a>
+            </div>
+
+            <!-- Información general del modelo -->
+            <div class="grid-container mt:3">
+              <div class="grid-item">
+                <div class="icon">
+                  <img data-src="assets/icons/construccion.png" width="50px" />
+                </div>
+                <div class="text-container">
+                  <div class="text-title">
+                    {{ activeButton === 'olivo' ? 160 : 195 }} m<sup>2</sup>
+                  </div>
+                  <div class="text-description">Construcción</div>
+                </div>
+              </div>
+              <div class="grid-item">
+                <div class="icon">
+                  <img data-src="assets/icons/path.svg" width="50px" />
+                </div>
+                <div class="text-container">
+                  <div class="text-title">112 m<sup>2</sup></div>
+                  <div class="text-description">Terreno</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lista de características del modelo OLIVO -->
+            <div
+              *ngIf="activeButton === 'olivo'"
+              class="flex justify:center m:width-.61"
+            >
+              <div class="department__list">
+                <ul class="department__column">
+                  <div class="department__icons flex:inline items:start mb:0:5">
+                    <img
+                      class="loaded"
+                      data-src="assets/icons/check.svg"
+                      alt="check"
+                    />
+                    <li>2 Niveles</li>
+                  </div>
+                  <div class="department__icons flex:inline items:start mb:0:5">
+                    <img
+                      class="loaded"
+                      data-src="assets/icons/check.svg"
+                      alt="check"
+                    />
+                    <li>
+                      3 Recámaras<br /><span
+                        >(principal con walk-in closet y baño)</span
+                      >
+                    </li>
+                  </div>
+                  <div class="department__icons flex:inline items:start mb:0:5">
+                    <img
+                      class="loaded"
+                      data-src="assets/icons/check.svg"
+                      alt="check"
+                    />
+                    <li>2.5 Baños</li>
+                  </div>
+                </ul>
+                <ul class="department__column">
+                  <div class="department__icons flex:inline items:start mb:0:5">
+                    <img
+                      class="loaded"
+                      data-src="assets/icons/check.svg"
+                      alt="check"
+                    />
+                    <li>Cocina con gran amplitud</li>
+                  </div>
+                  <div class="department__icons flex:inline items:start mb:0:5">
+                    <img
+                      class="loaded"
+                      data-src="assets/icons/check.svg"
+                      alt="check"
+                    />
+                    <li>Estancia</li>
+                  </div>
+                  <div class="department__icons flex:inline items:start mb:0:5">
+                    <img
+                      class="loaded"
+                      data-src="assets/icons/check.svg"
+                      alt="check"
+                    />
+                    <li>Cuarto de lavandería</li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+
+            <!--  LINARIA -->
+            <div
+              *ngIf="activeButton === 'linaria'"
+              class="flex justify:center m:width-.51"
+            >
+              <div class="department__list">
+                <ul class="department__column">
+                  <div class="department__icons flex:inline items:start mb:0:5">
+                    <img
+                      class="loaded"
+                      data-src="assets/icons/check.svg"
+                      alt="check"
+                    />
+                    <li>3 Niveles</li>
+                  </div>
+                  <div class="department__icons flex:inline items:start mb:0:5">
+                    <img
+                      class="loaded"
+                      data-src="assets/icons/check.svg"
+                      alt="check"
+                    />
+                    <li>
+                      3 Recámaras<br /><span
+                        >(principal con walk-in closet y baño)</span
+                      >
+                    </li>
+                  </div>
+                  <div class="department__icons flex:inline items:start mb:0:5">
+                    <img
+                      class="loaded"
+                      data-src="assets/icons/check.svg"
+                      alt="check"
+                    />
+                    <li>3.5 Baños</li>
+                  </div>
+                  <div class="department__icons flex:inline items:start mb:0:5">
+                    <img
+                      class="loaded"
+                      data-src="assets/icons/check.svg"
+                      alt="check"
+                    />
+                    <li>Cocina con gran amplitud</li>
+                  </div>
+                  <div class="department__icons flex:inline items:start mb:0:5">
+                    <img
+                      class="loaded"
+                      data-src="assets/icons/check.svg"
+                      alt="check"
+                    />
+                    <li>Estancia</li>
+                  </div>
+                </ul>
+                <ul class="department__column">
+                  <div class="department__icons flex:inline items:start mb:0:5">
+                    <img
+                      class="loaded"
+                      data-src="assets/icons/check.svg"
+                      alt="check"
+                    />
+                    <li>Cuarto de lavandería 3er piso</li>
+                  </div>
+                  <div class="department__icons flex:inline items:start mb:0:5">
+                    <img
+                      class="loaded"
+                      data-src="assets/icons/check.svg"
+                      alt="check"
+                    />
+                    <li>Patio del servicio</li>
+                  </div>
+                  <div class="department__icons flex:inline items:start mb:0:5">
+                    <img
+                      class="loaded"
+                      data-src="assets/icons/check.svg"
+                      alt="check"
+                    />
+                    <li>Roof Garden</li>
+                  </div>
+                  <div class="department__icons flex:inline items:start mb:0:5">
+                    <img
+                      class="loaded"
+                      data-src="assets/icons/check.svg"
+                      alt="check"
+                    />
+                    <li>Cochera techada para 2 autos</li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen del modelo -->
+        <div class="department__image">
+          <ng-container *ngIf="activeButton === 'olivo'">
+            <div style="width: 100%; height: 100%">
+              <model-olivia></model-olivia>
+            </div>
+          </ng-container>
+          <ng-container *ngIf="activeButton === 'linaria'">
+            <div style="width: 100%; height: 100%">
+              <model-linaria></model-linaria>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,40 @@
+<section class="visit" id="conoce-aldaba">
+  <div class="visit__content">
+    <div class="visit__top">
+      <div class="visit__slider">
+
+        <div class="visit__slider-images" style="background-color: none;">
+
+          <img
+            *ngFor="let img of images; let i = index"
+            [src]="img"
+            [ngClass]="{ active: currentIndex === i }"
+          />
+
+          <div class="visit__control">
+
+            <button
+              *ngFor="let img of images; let i = index"
+              (click)="showImage(i)"
+              [style.background-color]="
+                currentIndex === i ? '#003748' : '#00394a40'
+              "
+            ></button>
+
+          </div>
+
+
+        </div>
+        <div class="visit__leyenda">
+          <p class="pv:0:5">*Imagen con fin ilustrativo, puede variar sin previo aviso. Consulta términos y condiciones en https://ruba.mx/terminos-y-condiciones</p>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+

@@ -1,0 +1,44 @@
+<nav class="nav" [ngClass]="{ 'nav--active': menuOpen }">
+  <a
+    class="nav__phone"
+    target="_blank"
+    href="tel:8448691210"
+    [ngClass]="{ visible: menuOpen }"
+    aria-label=""
+    (click)="toggleMenu()"
+  >
+    <img class="" data-src="assets/icons/phone.png" alt="phone" />
+  </a>
+  <button
+    class="nav__whatsapp whatappForm"
+    [ngClass]="{ visible: menuOpen }"
+    aria-label=""
+    (click)="toggleMenu()"
+  >
+    <img class="" data-src="assets/icons/what.png" alt="whatsapp" />
+  </button>
+  <button
+    class="nav__toggle"
+    aria-label="Toggle navigation"
+    (click)="toggleMenu()"
+  >
+    <img
+      [src]="menuOpen ? 'assets/icons/close.svg' : 'assets/icons/menu.svg'"
+      alt="Menu Icon"
+      class="nav__icon"
+    />
+  </button>
+
+  <div class="nav__content" [ngClass]="{ 'nav__content--open': menuOpen }">
+    <span class="nav__span">MENÚ</span>
+    <a class="nav__link" href="#conoce-aldaba" (click)="toggleMenu()"
+      >CONOCE VARENNA</a
+    >
+    <a class="nav__link" href="#departamento" (click)="toggleMenu()"
+      >AMENIDADES</a
+    >
+    <a class="nav__link" href="#galeria" (click)="toggleMenu()">Galería</a>
+    <a class="nav__link" href="#ubicacion" (click)="toggleMenu()">Ubicación</a>
+    <a class="nav__link promo" href="#promocion" (click)="toggleMenu()">Promocion</a>
+  </div>
+</nav>

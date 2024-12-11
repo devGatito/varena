@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M40 0C51.0471 0 60 8.95264 60 20L60 40C60 51.0474 51.0471 60 40 60L20 60C8.95288 60 0 51.0474 0 40L0 20C0 8.95264 8.95288 0 20 0L40 0Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" clip-rule="evenodd" fill-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="Menu">
+    <path d="M40 0C51.0471 0 60 8.95264 60 20L60 40C60 51.0474 51.0471 60 40 60L20 60C8.95288 60 0 51.0474 0 40L0 20C0 8.95264 8.95288 0 20 0L40 0Z" id="Menu" fill="#003748" stroke="none" />
+    <path d="M15 30C15 28.3431 16.3431 27 18 27C19.6569 27 21 28.3431 21 30C21 31.6569 19.6569 33 18 33C16.3431 33 15 31.6569 15 30Z" id="Oval" fill="#F3EFE4" fill-rule="evenodd" stroke="none" clip-path="url(#clip_1)" />
+    <path d="M27 30C27 28.3431 28.3431 27 30 27C31.6569 27 33 28.3431 33 30C33 31.6569 31.6569 33 30 33C28.3431 33 27 31.6569 27 30Z" id="Oval" fill="#F3EFE4" fill-rule="evenodd" stroke="none" clip-path="url(#clip_1)" />
+    <path d="M39 30C39 28.3431 40.3431 27 42 27C43.6569 27 45 28.3431 45 30C45 31.6569 43.6569 33 42 33C40.3431 33 39 31.6569 39 30Z" id="Oval" fill="#F3EFE4" fill-rule="evenodd" stroke="none" clip-path="url(#clip_1)" />
+  </g>
+</svg>

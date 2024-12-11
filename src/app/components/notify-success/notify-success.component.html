@@ -1,0 +1,34 @@
+<div class="successPop flex:center hide">
+  <div
+    class="successPop__content animate__animated"
+    data-animated="animate__fadeInUp"
+    data-animation-delay="1000ms"
+  >
+    <div class="flex:center">
+      <img
+        data-src="assets/icons/success.svg"
+        alt="succes form send"
+        width="120"
+        height="120"
+      />
+    </div>
+    <p class=" t:center">
+      Se han enviado tus datos correctamente, en breve nuestro equipo de
+      expertos se pondrá en contacto contigo.
+    </p>
+    <div class="flex:center mt:2 ph:1">
+      <button
+        id="closePop"
+        class="ui:button type:button theme:success style:small-round"
+        aria-label="Ver más detalles"
+        (click)="onClose()"
+      >
+        Aceptar
+      </button>
+    </div>
+    <p class="pt:1 t:center size:xsmall opacity:6">
+      A partir de este momento tus datos personales están protegidos de acuerdo
+      a nuestro aviso de privacidad.
+    </p>
+  </div>
+</div>
